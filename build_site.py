@@ -64,12 +64,12 @@ pages = {}
 
 # ---------------- INDEX ----------------
 pages["index.html"] = page(
-    "Home", "Photonic Intelligence Laboratory — silicon photonics, neuromorphic computing, and AI hardware research.",
+    "Home", "Integrated Photonics Lab — silicon photonics, neuromorphic computing, and AI hardware research.",
     "index",
     """
 <section class="hero">
   <div class="container">
-    <h1>Photonic Intelligence Laboratory</h1>
+    <h1>Integrated Photonics Lab</h1>
     <p>Advancing silicon photonics, neuromorphic computing, and AI hardware for next-generation intelligent systems.</p>
     <div class="btn-row">
       <a href="research.html" class="btn btn-primary">Explore Our Research</a>
@@ -143,7 +143,7 @@ pages["index.html"] = page(
 
 # ---------------- RESEARCH ----------------
 pages["research.html"] = page(
-    "Research", "Research areas of the Photonic Intelligence Laboratory.",
+    "Research", "Research areas of the Integrated Photonics Lab.",
     "research",
     """
 <section class="hero" style="padding:70px 24px;">
@@ -185,7 +185,7 @@ pages["research.html"] = page(
 
 # ---------------- PEOPLE ----------------
 pages["people.html"] = page(
-    "People", "Meet the members of the Photonic Intelligence Laboratory.",
+    "People", "Meet the members of the Integrated Photonics Lab.",
     "people",
     """
 <section class="hero" style="padding:70px 24px;">
@@ -198,9 +198,9 @@ pages["people.html"] = page(
     <div class="grid" style="max-width:340px;margin:0 auto 60px;">
       <div class="person">
         <div class="avatar"></div>
-        <h3>Dr. [Advisor Name]</h3>
-        <p class="role">Assistant Professor, Dept. of Electrical Engineering</p>
-        <p>Research interests: Silicon Photonics, Integrated Photonics, AI Hardware, Neuromorphic Computing.</p>
+        <h3>Dr. M. Jobayer Hossain</h3>
+        <p class="role">Assistant Professor, School of Electrical Engineering and Computer Science (SEECS)</p>
+        <p>Research interests: Photonic Integrated Circuits (PICs), Reconfigurable PICs, Quantum PICs, Optical Interconnects, AI Accelerators, Photonic Neuromorphic Computing, Space & Satellite Technologies.</p>
       </div>
     </div>
 
@@ -208,7 +208,7 @@ pages["people.html"] = page(
     <div class="grid">
       <div class="person">
         <div class="avatar"></div>
-        <h3>Sanowar Hossain</h3>
+        <h3>Md Sanowar Hossain</h3>
         <p class="role">PhD Student</p>
         <p>Reservoir Computing · Neuromorphic Photonics · Silicon Photonics · Machine Learning</p>
       </div>
@@ -226,7 +226,7 @@ pages["people.html"] = page(
 
 # ---------------- PUBLICATIONS ----------------
 pages["publications.html"] = page(
-    "Publications", "Publications from the Photonic Intelligence Laboratory.",
+    "Publications", "Publications from the Integrated Photonics Lab.",
     "publications",
     """
 <section class="hero" style="padding:70px 24px;">
@@ -258,7 +258,7 @@ pages["publications.html"] = page(
 
 # ---------------- PROJECTS ----------------
 pages["projects.html"] = page(
-    "Projects", "Active research projects in the Photonic Intelligence Laboratory.",
+    "Projects", "Active research projects in the Integrated Photonics Lab.",
     "projects",
     """
 <section class="hero" style="padding:70px 24px;">
@@ -291,7 +291,7 @@ pages["projects.html"] = page(
 
 # ---------------- NEWS ----------------
 pages["news.html"] = page(
-    "News", "Latest news from the Photonic Intelligence Laboratory.",
+    "News", "Latest news from the Integrated Photonics Lab.",
     "news",
     """
 <section class="hero" style="padding:70px 24px;">
@@ -311,7 +311,7 @@ pages["news.html"] = page(
 
 # ---------------- JOIN ----------------
 pages["join.html"] = page(
-    "Join Us", "Open positions in the Photonic Intelligence Laboratory.",
+    "Join Us", "Open positions in the Integrated Photonics Lab.",
     "join",
     """
 <section class="hero" style="padding:70px 24px;">
@@ -339,11 +339,11 @@ pages["join.html"] = page(
 
 # ---------------- CONTACT ----------------
 pages["contact.html"] = page(
-    "Contact", "Contact the Photonic Intelligence Laboratory.",
+    "Contact", "Contact the Integrated Photonics Lab.",
     "contact",
     """
 <section class="hero" style="padding:70px 24px;">
-  <div class="container"><h1>Contact</h1><p>Department of Electrical Engineering, North Dakota State University.</p></div>
+  <div class="container"><h1>Contact</h1><p>School of Electrical Engineering & Computer Science, University of North Dakota.</p></div>
 </section>
 
 <section class="section">
@@ -351,11 +351,12 @@ pages["contact.html"] = page(
     <div class="grid" style="grid-template-columns: 1fr 1fr; align-items:start;">
       <div>
         <h3 style="color:var(--primary);margin-bottom:12px;">Address</h3>
-        <p>Photonic Intelligence Laboratory<br>
-        Department of Electrical Engineering<br>
-        Leonard Hall<br>
-        North Dakota State University<br>
-        Fargo, ND, USA</p>
+        <p>Integrated Photonics Lab<br>
+        School of Electrical Engineering & Computer Science<br>
+        Leonard Hall, Room No. 42<br>
+        University of North Dakota<br>
+        81 Cornell St Stop 8153<br>
+        Grand Forks, ND 58202-8153, USA</p>
         <h3 style="color:var(--primary);margin:20px 0 12px;">Email</h3>
         <p><a href="mailto:lab@example.edu" style="color:var(--accent);">lab@example.edu</a></p>
       </div>
