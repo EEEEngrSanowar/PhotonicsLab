@@ -5,7 +5,7 @@ OUT = "/home/claude/photonic-lab"
 NAV = """<header class="navbar">
   <div class="nav-inner">
     <a href="index.html" class="brand">
-      <span class="brand-mark"></span> Photonic Intelligence Lab
+      <span class="brand-mark"></span> Integrated Photonics Lab
     </a>
     <nav class="nav-links">
       <a href="index.html" data-page="index">Home</a>
@@ -25,7 +25,7 @@ NAV = """<header class="navbar">
 
 FOOTER = """<footer>
   <div class="brand" style="justify-content:center;color:#fff;">
-    <span class="brand-mark"></span> Photonic Intelligence Laboratory
+    <span class="brand-mark"></span> Photonic Integrated Photonics Lab
   </div>
   <div class="footer-links">
     <a href="https://github.com/" target="_blank">GitHub</a>
