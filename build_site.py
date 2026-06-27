@@ -199,7 +199,7 @@ pages["people.html"] = page(
       <div class="person">
         <div class="avatar"></div>
         <h3>Dr. M. Jobayer Hossain</h3>
-        <p class="role">Assistant Professor, School of Electrical Engineering and Computer Science (SEECS)</p>
+        <p class="role">Assistant Professor, School of Electrical Engineering & Computer Science (SEECS)</p>
         <p>Research interests: Photonic Integrated Circuits (PICs), Reconfigurable PICs, Quantum PICs, Optical Interconnects, AI Accelerators, Photonic Neuromorphic Computing, Space & Satellite Technologies.</p>
       </div>
     </div>
