@@ -1,6 +1,6 @@
 :root {
-  --primary: #0B3C5D;
-  --accent: #3AAED8;
+  --primary: #009A44;  
+  --accent: #00C853; 
   --bg: #F8FAFC;
   --text: #1F2937;
   --card-bg: #FFFFFF;
@@ -8,14 +8,13 @@
 }
 
 [data-theme="dark"] {
-  --primary: #3AAED8;
-  --accent: #0B3C5D;
+  --primary: #00C853;   /* age chilo #3AAED8 */
+  --accent: #009A44;    /* age chilo #0B3C5D */
   --bg: #0F172A;
   --text: #E2E8F0;
   --card-bg: #1E293B;
   --border: #334155;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -123,7 +122,7 @@ ul { list-style: none; }
 
 /* ---------- HERO ---------- */
 .hero {
-  background: linear-gradient(135deg, var(--primary), #134B70 60%, var(--accent));
+  background: linear-gradient(135deg, var(--primary), #00722F 60%, var(--accent));
   color: #fff;
   padding: 100px 24px 90px;
   text-align: center;
@@ -206,7 +205,7 @@ ul { list-style: none; }
 
 .tag {
   display: inline-block;
-  background: rgba(58, 174, 216, 0.15);
+  background: rgba(0, 154, 68, 0.15);
   color: var(--accent);
   font-size: 0.75rem;
   font-weight: 600;
