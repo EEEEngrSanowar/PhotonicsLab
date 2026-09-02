@@ -9,9 +9,23 @@
 
 <!-- New styles for home layout + slider. Move to css/style.css later if you want. -->
 <style>
+  /* Trim empty space around hero + home section */
+  .hero{
+    padding-top: 60px !important;
+    padding-bottom: 40px !important;
+    min-height: auto !important;
+  }
+  .home-section{
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+  .section-alt{
+    padding-top: 30px !important;
+  }
+
   .home-grid{
     display:grid;
-    grid-template-columns: 1fr 2fr 1.2fr;
+    grid-template-columns: 1fr 2.6fr 1.2fr;
     gap:28px;
     align-items:start;
   }
@@ -38,11 +52,11 @@
     padding-left:10px;
   }
 
-  /* Slider */
+  /* Slider — bigger */
   .slider{
     position:relative;
     width:100%;
-    aspect-ratio: 16/10;
+    aspect-ratio: 4/3;
     border-radius:12px;
     overflow:hidden;
     box-shadow:0 4px 20px rgba(0,0,0,0.12);
@@ -63,10 +77,10 @@
   }
   .slide-caption{
     position:absolute; left:0; right:0; bottom:0;
-    padding:14px 20px;
-    background:linear-gradient(transparent, rgba(0,0,0,0.7));
+    padding:16px 22px;
+    background:linear-gradient(transparent, rgba(0,0,0,0.75));
     color:#fff;
-    font-size:1rem;
+    font-size:1.05rem;
     font-weight:500;
   }
   .slider-btn{
@@ -75,24 +89,24 @@
     background:rgba(0,0,0,0.4);
     color:#fff;
     border:none;
-    width:38px; height:38px;
+    width:42px; height:42px;
     border-radius:50%;
-    font-size:1.5rem;
+    font-size:1.6rem;
     cursor:pointer;
     display:flex; align-items:center; justify-content:center;
     transition:background .2s;
   }
   .slider-btn:hover{ background:rgba(0,0,0,0.7); }
-  .slider-btn.prev{ left:12px; }
-  .slider-btn.next{ right:12px; }
+  .slider-btn.prev{ left:14px; }
+  .slider-btn.next{ right:14px; }
   .slider-dots{
-    position:absolute; bottom:12px; left:50%;
+    position:absolute; bottom:14px; left:50%;
     transform:translateX(-50%);
     display:flex; gap:8px;
     z-index:2;
   }
   .dot{
-    width:9px; height:9px;
+    width:10px; height:10px;
     border-radius:50%;
     background:rgba(255,255,255,0.5);
     cursor:pointer;
@@ -100,10 +114,10 @@
   }
   .dot.active{ background:#fff; transform:scale(1.2); }
 
-  .see-more-wrap{ margin-top:16px; text-align:center; }
+  .see-more-wrap{ margin-top:20px; text-align:center; }
 
   @media (max-width: 1024px){
-    .home-grid{ grid-template-columns: 1fr 1.6fr; }
+    .home-grid{ grid-template-columns: 1fr 1.8fr; }
     .home-news{ grid-column: 1 / -1; }
   }
   @media (max-width: 700px){
@@ -140,7 +154,7 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section home-section">
   <div class="container home-grid">
 
     <!-- LEFT: Research Areas -->
@@ -199,7 +213,7 @@
         </div>
 
         <div class="see-more-wrap">
-          <a href="news.html" class="btn btn-outline">See More</a>
+          <a href="news.html" class="btn btn-outline">See More News</a>
         </div>
       </div>
     </aside>
