@@ -11,8 +11,8 @@
 <style>
   .home-grid{
     display:grid;
-    grid-template-columns: 1fr 2fr;
-    gap:32px;
+    grid-template-columns: 1fr 2fr 1.2fr;
+    gap:28px;
     align-items:start;
   }
   .home-block{ margin-bottom:32px; }
@@ -100,7 +100,13 @@
   }
   .dot.active{ background:#fff; transform:scale(1.2); }
 
-  @media (max-width: 860px){
+  .see-more-wrap{ margin-top:16px; text-align:center; }
+
+  @media (max-width: 1024px){
+    .home-grid{ grid-template-columns: 1fr 1.6fr; }
+    .home-news{ grid-column: 1 / -1; }
+  }
+  @media (max-width: 700px){
     .home-grid{ grid-template-columns: 1fr; }
   }
 </style>
@@ -137,10 +143,8 @@
 <section class="section">
   <div class="container home-grid">
 
-    <!-- LEFT COLUMN -->
+    <!-- LEFT: Research Areas -->
     <aside class="home-left">
-
-      <!-- Research Areas (headlines only) -->
       <div class="home-block">
         <h2 class="block-title">Research Areas</h2>
         <ul class="area-list">
@@ -152,33 +156,10 @@
           <li><a href="research.html#ml-photonics">Machine Learning for Photonics</a></li>
         </ul>
       </div>
-
-      <!-- Latest News (short list + See More) -->
-      <div class="home-block">
-        <h2 class="block-title">Latest News</h2>
-
-        <div class="list-item">
-          <span class="date">AUGUST 2026</span>
-          <p>Two papers accepted at IEEE Photonics Conference (IPC) 2026.</p>
-        </div>
-        <div class="list-item">
-          <span class="date">AUGUST 2026</span>
-          <p>Md Mufassal Ahmad is joining the lab as a new PhD student — welcome!</p>
-        </div>
-        <div class="list-item">
-          <span class="date">AUGUST 2026</span>
-          <p>Kevin Biju completed his summer LiDAR internship in our lab.</p>
-        </div>
-
-        <div style="margin-top:16px;">
-          <a href="news.html" class="btn btn-outline">See More</a>
-        </div>
-      </div>
-
     </aside>
 
-    <!-- MIDDLE / RIGHT: Image slider -->
-    <div class="home-right">
+    <!-- MIDDLE: Image slider -->
+    <div class="home-middle">
       <div class="slider" id="homeSlider">
         <div class="slides">
           <div class="slide active">
@@ -195,10 +176,33 @@
         <div class="slider-dots">
           <span class="dot active" data-index="0"></span>
           <span class="dot" data-index="1"></span>
-          <span class="dot" data-index="2"></span>
         </div>
       </div>
     </div>
+
+    <!-- RIGHT: Latest News -->
+    <aside class="home-news">
+      <div class="home-block">
+        <h2 class="block-title">Latest News</h2>
+
+        <div class="list-item">
+          <span class="date">AUGUST 2026</span>
+          <p>Two papers accepted at IEEE Photonics Conference (IPC) 2026.</p>
+        </div>
+        <div class="list-item">
+          <span class="date">AUGUST 2026</span>
+          <p>Md Mufassal Ahmad is joining the lab as a new PhD student — welcome!</p>
+        </div>
+        <div class="list-item">
+          <span class="date">AUGUST 2026</span>
+          <p>Kevin Biju completed his summer LiDAR internship in our lab.</p>
+        </div>
+
+        <div class="see-more-wrap">
+          <a href="news.html" class="btn btn-outline">See More</a>
+        </div>
+      </div>
+    </aside>
 
   </div>
 </section>
