@@ -114,7 +114,14 @@
   }
   .dot.active{ background:#fff; transform:scale(1.2); }
 
-  .see-more-wrap{ margin-top:20px; text-align:center; }
+.see-more-wrap .btn-outline{
+  color: var(--primary, #2e7d32);
+  border: 2px solid var(--primary, #2e7d32);
+}
+.see-more-wrap .btn-outline:hover{
+  background: var(--primary, #2e7d32);
+  color: #fff;
+}
 
   @media (max-width: 1024px){
     .home-grid{ grid-template-columns: 1fr 1.8fr; }
