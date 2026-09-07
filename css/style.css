@@ -302,7 +302,7 @@ ul { list-style: none; }
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 28px;
+  padding: 20px 24px;
   text-align: center;
 }
 
