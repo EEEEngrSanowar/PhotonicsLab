@@ -29,6 +29,13 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  // Auto-inject footer on every page (skip if page already has one)
+  if (!document.querySelector('footer')) {
+    var footer = document.createElement('footer');
+    footer.innerHTML = '<p class="copyright">© 2026 UND GLIDE Lab. All rights reserved.</p>';
+    document.body.appendChild(footer);
+  }
 });
 
 // Contact form (static demo - replace action with Formspree/Getform endpoint)
