@@ -6,6 +6,31 @@
 <title>People | UND GLIDE Lab</title>
 <meta name="description" content="Meet the members of GLIDE Lab.">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  .person-links {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  .person-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--primary, #009A44);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .person-links a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+</style>
 </head>
 <body>
 <header class="navbar">
@@ -27,41 +52,77 @@
     <button class="nav-toggle">☰</button>
   </div>
 </header>
+
 <section class="hero" style="padding:70px 24px;">
-  <div class="container"><h1>People</h1><p>Our principal investigator, graduate researchers, and alumni.</p></div>
+  <div class="container">
+    <h1>People</h1>
+    <p>Our principal investigator, graduate researchers, and alumni.</p>
+  </div>
 </section>
+
 <section class="section">
   <div class="container">
+
     <h2 class="section-title">Principal Investigator</h2>
     <div class="grid" style="max-width:340px;margin:0 auto 60px;">
       <div class="person">
         <div class="avatar" style="background-image:url('hossain.jpg'); background-size:cover; background-position:center;"></div>
         <h3>Dr. M. Jobayer Hossain</h3>
-        <p class="role">Assistant Professor, School of Electrical Engineering & Computer Science (SEECS)</p>
-        <p>Research interests: Photonic Integrated Circuits (PICs), Reconfigurable PICs, Quantum PICs, Optical Interconnects, AI Accelerators, Photonic Neuromorphic Computing, Space & Satellite Technologies.</p>
+        <p class="role">Assistant Professor, School of Electrical Engineering &amp; Computer Science (SEECS)</p>
+        <p>Research interests: Photonic Integrated Circuits (PICs), Reconfigurable PICs, Quantum PICs, Optical Interconnects, AI Accelerators, Photonic Neuromorphic Computing, Space &amp; Satellite Technologies.</p>
+        <div class="person-links">
+          <a href="https://www.linkedin.com/in/mdjobayer/" target="_blank" title="LinkedIn">in</a>
+        </div>
       </div>
     </div>
 
     <h2 class="section-title">Graduate Students</h2>
     <div class="grid" style="margin-bottom:60px;">
+
       <div class="person">
         <div class="avatar" style="background-image:url('sanowar.jpg'); background-size:cover; background-position:center;"></div>
         <h3>Md Sanowar Hossain</h3>
         <p class="role">PhD Student</p>
         <p>Reservoir Computing · Neuromorphic Photonics · Silicon Photonics · Machine Learning</p>
+        <div class="person-links">
+          <a href="https://www.linkedin.com/in/eeeengrsanowar/" target="_blank" title="LinkedIn">in</a>
+        </div>
       </div>
+
+      <div class="person">
+        <div class="avatar" style="background-image:url('christopher.jpg'); background-size:cover; background-position:center;"></div>
+        <h3>Christopher Hiler</h3>
+        <p class="role">PhD Student, Electrical Engineering (Spring 2026 – Present)</p>
+        <p>Radio Frequency Photonic Integrated Circuits</p>
+        <div class="person-links">
+          <a href="https://www.linkedin.com/in/chris-hiler-4286936/" target="_blank" title="LinkedIn">in</a>
+        </div>
+      </div>
+
+      <div class="person">
+        <div class="avatar" style="background-image:url('ronald.jpg'); background-size:cover; background-position:center;"></div>
+        <h3>Ronald Brooks</h3>
+        <p class="role">PhD Student, Electrical Engineering</p>
+        <p>&nbsp;</p>
+      </div>
+
       <div class="person">
         <div class="avatar" style="background-image:url('mufassal.jpg'); background-size:cover; background-position:center;"></div>
         <h3>Md Mufassal Ahmad</h3>
         <p class="role">PhD Student (Fall 2026)</p>
         <p>Incoming PhD student — research interests in photonic integrated circuits.</p>
+        <div class="person-links">
+          <a href="https://www.linkedin.com/in/md-mufassal-ahmad-22b3811a5/" target="_blank" title="LinkedIn">in</a>
+        </div>
       </div>
+
       <div class="person" style="opacity:0.6;">
         <div class="avatar"></div>
         <h3>Open Position</h3>
         <p class="role">PhD / MS Student</p>
         <p>We are recruiting — see the Join Us page.</p>
       </div>
+
     </div>
 
     <h2 class="section-title">Alumni</h2>
@@ -73,9 +134,10 @@
         <p>Aerospace Engineering undergraduate. Built a proof-of-concept LiDAR system from discrete parts — laser modulation, polarization optics, phase detection, and galvo beam steering. Supported by NORDTECH and Griffiss Institute.</p>
       </div>
     </div>
+
   </div>
 </section>
-=
+
 <script src="js/script.js"></script>
 <script>
 document.querySelector('[data-page="people"]').classList.add('active');
