@@ -46,9 +46,10 @@ ul { list-style: none; }
 }
 
 .nav-inner {
-  max-width: 1140px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 14px 24px;
+  padding: 20px 40px;
+  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,16 +57,16 @@ ul { list-style: none; }
 
 .brand {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   color: var(--primary);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 
 .brand-mark {
-  width: 32px;
-  height: 32px;
+  width: 52px;
+  height: 52px;
   background-image: url('../glide-logo2.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -74,12 +75,12 @@ ul { list-style: none; }
 
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   align-items: center;
 }
 
 .nav-links a {
-  font-size: 0.92rem;
+  font-size: 1.1rem;
   font-weight: 500;
   color: var(--text);
   opacity: 0.85;
@@ -92,10 +93,10 @@ ul { list-style: none; }
   background: none;
   border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 6px 12px;
+  padding: 8px 14px;
   cursor: pointer;
   color: var(--text);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 
 .nav-toggle {
@@ -110,7 +111,7 @@ ul { list-style: none; }
 @media (max-width: 860px) {
   .nav-links {
     position: absolute;
-    top: 64px;
+    top: 80px;
     left: 0;
     right: 0;
     background: var(--card-bg);
@@ -164,7 +165,7 @@ ul { list-style: none; }
 .section-alt { background: var(--card-bg); }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: var(--primary);
   margin-bottom: 12px;
@@ -175,6 +176,7 @@ ul { list-style: none; }
   text-align: center;
   max-width: 640px;
   margin: 0 auto 48px;
+  font-size: 1.05rem;
   opacity: 0.8;
 }
 
@@ -203,14 +205,14 @@ ul { list-style: none; }
   margin-bottom: 16px;
 }
 
-.card h3 { font-size: 1.15rem; margin-bottom: 8px; color: var(--primary); }
-.card p { font-size: 0.92rem; opacity: 0.85; }
+.card h3 { font-size: 1.3rem; margin-bottom: 8px; color: var(--primary); }
+.card p { font-size: 1.02rem; opacity: 0.85; }
 
 .tag {
   display: inline-block;
   background: rgba(0, 154, 68, 0.15);
   color: var(--accent);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 600;
   padding: 4px 10px;
   border-radius: 20px;
@@ -222,9 +224,10 @@ ul { list-style: none; }
   border-left: 3px solid var(--accent);
   padding: 6px 0 6px 18px;
   margin-bottom: 18px;
+  font-size: 1.05rem;
 }
 
-.list-item .date { font-size: 0.8rem; font-weight: 700; color: var(--accent); }
+.list-item .date { font-size: 0.95rem; font-weight: 700; color: var(--accent); }
 
 /* ---------- PEOPLE ---------- */
 .person {
@@ -243,8 +246,8 @@ ul { list-style: none; }
   background: linear-gradient(135deg, var(--primary), var(--accent));
 }
 
-.person h3 { color: var(--primary); margin-bottom: 4px; }
-.person .role { font-size: 0.85rem; opacity: 0.7; margin-bottom: 12px; }
+.person h3 { color: var(--primary); margin-bottom: 4px; font-size: 1.2rem; }
+.person .role { font-size: 0.95rem; opacity: 0.7; margin-bottom: 12px; }
 
 /* ---------- PUBLICATIONS ---------- */
 .pub-item {
@@ -255,10 +258,10 @@ ul { list-style: none; }
   margin-bottom: 16px;
 }
 
-.pub-item h4 { color: var(--primary); margin-bottom: 6px; }
-.pub-item .venue { font-style: italic; opacity: 0.8; font-size: 0.9rem; }
+.pub-item h4 { color: var(--primary); margin-bottom: 6px; font-size: 1.1rem; }
+.pub-item .venue { font-style: italic; opacity: 0.8; font-size: 0.95rem; }
 .pub-links { margin-top: 10px; display: flex; gap: 14px; }
-.pub-links a { color: var(--accent); font-weight: 600; font-size: 0.85rem; }
+.pub-links a { color: var(--accent); font-weight: 600; font-size: 0.9rem; }
 
 /* ---------- FORM ---------- */
 .form-box {
@@ -270,7 +273,7 @@ ul { list-style: none; }
   padding: 32px;
 }
 
-.form-box label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; margin-top: 16px; }
+.form-box label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px; margin-top: 16px; }
 
 .form-box input, .form-box textarea {
   width: 100%;
@@ -280,6 +283,7 @@ ul { list-style: none; }
   background: var(--bg);
   color: var(--text);
   font-family: inherit;
+  font-size: 1rem;
 }
 
 .form-box button { margin-top: 22px; width: 100%; }
@@ -301,9 +305,9 @@ footer .footer-links {
   flex-wrap: wrap;
 }
 
-footer .footer-links a { opacity: 0.85; font-size: 0.9rem; }
+footer .footer-links a { opacity: 0.85; font-size: 0.95rem; }
 footer .footer-links a:hover { opacity: 1; }
-footer .copyright { font-size: 0.8rem; opacity: 0.7; margin-top: 12px; }
+footer .copyright { font-size: 0.85rem; opacity: 0.7; margin-top: 12px; }
 
 /* ---------- GALLERY ---------- */
 .gallery-grid {
@@ -320,7 +324,7 @@ footer .copyright { font-size: 0.8rem; opacity: 0.7; margin-top: 12px; }
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
   opacity: 0.85;
 }
