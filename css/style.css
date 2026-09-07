@@ -337,9 +337,16 @@ ul { list-style: none; }
 footer {
   background: var(--primary);
   color: #fff;
-  padding: 48px 24px 28px;
+  padding: 20px 24px;
   text-align: center;
   margin-top: 0;
+}
+
+footer .copyright {
+  font-size: 0.9rem;
+  opacity: 0.95;
+  margin: 0;
+  color: #fff;
 }
 
 footer .footer-links {
