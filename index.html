@@ -7,14 +7,9 @@
 <meta name="description" content="UND GLIDE Lab — silicon photonics, neuromorphic and quantum computing, and AI hardware research.">
 <link rel="stylesheet" href="css/style.css">
 
-<!-- New styles for home layout + slider. Move to css/style.css later if you want. -->
+<!-- Home-page-specific styles (layout + slider). Global styles are in css/style.css. -->
 <style>
-  /* Trim empty space around hero + home section */
-  .hero{
-    padding-top: 60px !important;
-    padding-bottom: 40px !important;
-    min-height: auto !important;
-  }
+  /* Trim empty space around home section */
   .home-section{
     padding-top: 30px !important;
     padding-bottom: 30px !important;
@@ -36,21 +31,6 @@
     padding-bottom:8px;
     border-bottom:2px solid var(--primary, #2e7d32);
   }
-  .area-list{ list-style:none; padding:0; margin:0; }
-  .area-list li{ margin:0; border-bottom:1px solid rgba(0,0,0,0.08); }
-  .area-list li:last-child{ border-bottom:none; }
-  .area-list a{
-    display:block;
-    padding:12px 4px;
-    color:inherit;
-    text-decoration:none;
-    font-weight:500;
-    transition:color .2s, padding .2s;
-  }
-  .area-list a:hover{
-    color:var(--primary, #2e7d32);
-    padding-left:10px;
-  }
 
   .about-text{
     font-size: 0.98rem;
@@ -62,7 +42,7 @@
   }
   .about-text:last-child{ margin-bottom: 0; }
 
-  /* Slider — bigger */
+  /* Slider */
   .slider{
     position:relative;
     width:100%;
@@ -78,7 +58,7 @@
     position:absolute; inset:0;
     opacity:0;
     transition:opacity .6s ease;
-    background:linear-gradient(135deg,#2e7d32,#1b5e20);
+    background:#000;
   }
   .slide.active{ opacity:1; }
   .slide img{
@@ -125,14 +105,14 @@
   }
   .dot.active{ background:#fff; transform:scale(1.2); }
 
-.see-more-wrap .btn-outline{
-  color: var(--primary, #2e7d32);
-  border: 2px solid var(--primary, #2e7d32);
-}
-.see-more-wrap .btn-outline:hover{
-  background: var(--primary, #2e7d32);
-  color: #fff;
-}
+  .see-more-wrap .btn-outline{
+    color: var(--primary, #2e7d32);
+    border: 2px solid var(--primary, #2e7d32);
+  }
+  .see-more-wrap .btn-outline:hover{
+    background: var(--primary, #2e7d32);
+    color: #fff;
+  }
 
   @media (max-width: 1024px){
     .home-grid{ grid-template-columns: 1fr 1.8fr; }
@@ -140,6 +120,7 @@
   }
   @media (max-width: 700px){
     .home-grid{ grid-template-columns: 1fr; }
+    .slider{ margin-top: 20px; }
   }
 </style>
 </head>
@@ -163,7 +144,6 @@
     <button class="nav-toggle">☰</button>
   </div>
 </header>
-
 
 <section class="hero">
   <div class="container">
@@ -189,36 +169,36 @@
     </aside>
 
     <!-- MIDDLE: Image slider -->
-<div class="home-middle">
-  <div class="slider" id="homeSlider">
-    <div class="slides">
-      <div class="slide active">
-        <img src="slide000.jpg" alt="">
-        <div class="slide-caption">Microelectronics US 2026 Panel Discussion: Dr. Hossain as a Moderator for the panel discussion "Transforming Modern Data Centers with Photonic Technologies"</div>
-      </div>
-      <div class="slide">
-        <img src="slide1.jpg" alt="">
-        <div class="slide-caption">Kevin Biju completed his summer LiDAR internship.</div>
-      </div>
-      <div class="slide">
-        <img src="slide2.jpg" alt="">
-        <div class="slide-caption">Kevin Biju completed his summer LiDAR internship.</div>
-      </div>
-      <div class="slide">
-        <img src="slide3.jpg" alt="">
-        <div class="slide-caption">Coffee, conversation, and good company — GLIDE Lab members at Scooter's Coffee.</div>
+    <div class="home-middle">
+      <div class="slider" id="homeSlider">
+        <div class="slides">
+          <div class="slide active">
+            <img src="slide000.jpg" alt="">
+            <div class="slide-caption">Microelectronics US 2026 Panel Discussion: Dr. Hossain as a Moderator for the panel discussion "Transforming Modern Data Centers with Photonic Technologies"</div>
+          </div>
+          <div class="slide">
+            <img src="slide1.jpg" alt="">
+            <div class="slide-caption">Kevin Biju completed his summer LiDAR internship.</div>
+          </div>
+          <div class="slide">
+            <img src="slide2.jpg" alt="">
+            <div class="slide-caption">Kevin Biju completed his summer LiDAR internship.</div>
+          </div>
+          <div class="slide">
+            <img src="slide3.jpg" alt="">
+            <div class="slide-caption">Coffee, conversation, and good company — GLIDE Lab members at Scooter's Coffee.</div>
+          </div>
+        </div>
+        <button class="slider-btn prev" aria-label="Previous">‹</button>
+        <button class="slider-btn next" aria-label="Next">›</button>
+        <div class="slider-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+          <span class="dot" data-index="3"></span>
+        </div>
       </div>
     </div>
-    <button class="slider-btn prev" aria-label="Previous">‹</button>
-    <button class="slider-btn next" aria-label="Next">›</button>
-    <div class="slider-dots">
-      <span class="dot active" data-index="0"></span>
-      <span class="dot" data-index="1"></span>
-      <span class="dot" data-index="2"></span>
-      <span class="dot" data-index="3"></span>
-    </div>
-  </div>
-</div>
 
     <!-- RIGHT: Latest News -->
     <aside class="home-news">
@@ -281,9 +261,9 @@
     <a href="https://www.linkedin.com/in/mdjobayer/" target="_blank">LinkedIn</a>
     <a href="mailto:jobayer.hossain@UND.edu">Email</a>
   </div>
-  <p>School of Electrical Engineering & Computer Science (SEECS) · University of North Dakota.</p>
+  <p>School of Electrical Engineering &amp; Computer Science (SEECS) · University of North Dakota.</p>
   <p class="copyright">© 2026 GLIDE Lab. All rights reserved.</p>
-  <p class="developer">Website designed & developed by <strong>Md Sanowar Hossain (PhD Student at UND)</strong></p>
+  <p class="developer">Website designed &amp; developed by <strong>Md Sanowar Hossain (PhD Student at UND)</strong></p>
 </footer>
 
 <script src="js/script.js"></script>
