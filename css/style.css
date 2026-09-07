@@ -1,8 +1,8 @@
 :root {
-  --primary: #009A44;      /* UND Kelly Green */
-  --accent: #00C853;       /* brighter green accent */
+  --primary: #009A44;
+  --accent: #00C853;
   --bg: #F8FAFC;
-  --text: #000000;         /* all body text black in light mode */
+  --text: #000000;
   --card-bg: #FFFFFF;
   --border: #E2E8F0;
 }
@@ -289,6 +289,50 @@ ul { list-style: none; }
 
 .form-box button { margin-top: 22px; width: 100%; }
 
+/* ---------- CONTACT (index page) ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+}
+
+.contact-card h4 {
+  color: var(--primary);
+  font-size: 1.15rem;
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
+}
+
+.contact-card p {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+.contact-card a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-card a:hover { text-decoration: underline; }
+
+@media (max-width: 700px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
 /* ---------- FOOTER ---------- */
 footer {
   background: var(--primary);
@@ -336,6 +380,8 @@ html:not([data-theme="dark"]) .section-title,
 html:not([data-theme="dark"]) .card h3,
 html:not([data-theme="dark"]) .person h3,
 html:not([data-theme="dark"]) .pub-item h4,
+html:not([data-theme="dark"]) .contact-card h4,
+html:not([data-theme="dark"]) .contact-card a,
 html:not([data-theme="dark"]) .btn-primary,
 html:not([data-theme="dark"]) .nav-links a:hover,
 html:not([data-theme="dark"]) .nav-links a.active,
