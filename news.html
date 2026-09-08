@@ -6,62 +6,84 @@
 <title>News | UND GLIDE Lab</title>
 <meta name="description" content="Latest news from UND GLIDE Lab.">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  .list-item p a {
+    color: var(--primary, #009A44);
+    font-weight: 500;
+  }
+  .list-item p a:hover { text-decoration: underline; }
+</style>
 </head>
-<body>
-<header class="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <span class="brand-mark"></span> UND GLIDE Lab
-    </a>
-    <nav class="nav-links">
-      <a href="index.html" data-page="index">Home</a>
-      <a href="research.html" data-page="research">Research</a>
-      <a href="people.html" data-page="people">People</a>
-      <a href="publications.html" data-page="publications">Publications</a>
-      <a href="projects.html" data-page="projects">Projects</a>
-      <a href="news.html" data-page="news">News</a>
-      <a href="join.html" data-page="join">Join Us</a>
-      <a href="contact.html" data-page="contact">Contact</a>
-      <button class="theme-toggle">🌙 Dark</button>
-    </nav>
-    <button class="nav-toggle">☰</button>
-  </div>
-</header>
+<body data-page="news">
+
 <section class="hero" style="padding:70px 24px;">
-  <div class="container"><h1>News</h1><p>Lab announcements and updates.</p></div>
+  <div class="container">
+    <h1>News</h1>
+    <p>Lab announcements and updates.</p>
+  </div>
 </section>
+
 <section class="section">
   <div class="container">
+
     <div class="list-item">
       <span class="date">AUGUST 2026</span>
       <p>Two papers accepted at IEEE Photonics Conference (IPC) 2026: <em>"Silicon Photonic Optical Phased Array with Apodized Grating Antennas for On-Chip LiDAR"</em> (oral) and <em>"4-bit Photonic Analog-to-Digital Converter on a 300 mm Silicon Photonics Platform"</em> (poster).</p>
     </div>
+
+    <div class="list-item">
+      <span class="date">AUGUST 6, 2026</span>
+      <p>Dr. Hossain gave an invited talk at IEEE RAPID conference titled <a href="https://rapid2026.exordo.com/programme/presentation/200" target="_blank">"Towards Foundry-Compatible Photonic Neuromorphic Computing: Architecture, Advances, and Implementation Challenges"</a> (<a href="https://www.researchgate.net/publication/411172885_Towards_Foundry-Compatible_Photonic_Neuromorphic_Computing_Architecture_Advances_and_Implementation_Challenges" target="_blank">paper</a>). Dr. Hossain also served as Chair of the <a href="https://rapid2026.exordo.com/programme/session/104" target="_blank">Hybrid Photonic/AI Accelerator Architecture</a> session.</p>
+    </div>
+
     <div class="list-item">
       <span class="date">AUGUST 2026</span>
       <p>Md Mufassal Ahmad is joining the lab as a new PhD student starting Fall 2026 — welcome!</p>
     </div>
+
     <div class="list-item">
       <span class="date">AUGUST 2026</span>
       <p>Kevin Biju, an Aerospace Engineering undergrad, just finished his summer internship in our lab. He built a proof-of-concept LiDAR system from discrete parts — laser modulation, polarization optics, phase detection, and galvo beam steering — with support from the Northeast Regional Defense Technology Hub (NORDTECH) and Griffiss Institute.</p>
     </div>
+
     <div class="list-item">
       <span class="date">AUGUST 2026</span>
       <p>Lab website launched.</p>
     </div>
+
+    <div class="list-item">
+      <span class="date">JULY 14, 2026</span>
+      <p>Dr. Hossain received a <strong>$220,000 award</strong> from ND EPSCoR as PI of the project "Photonic Integrated Circuits Test &amp; Characterization Lab" (Award ID: FAR0038152, Project ID: ND0031839).</p>
+    </div>
+
     <div class="list-item">
       <span class="date">JUNE 2026</span>
       <p>Looking for motivated PhD and MS students — see Join Us.</p>
     </div>
+
+    <div class="list-item">
+      <span class="date">MAY 8, 2026</span>
+      <p>Dr. Hossain received the <strong>Ansys Funded Curriculum Award</strong> for developing EE 490 / EECS 590 <em>Photonic Integrated Circuits</em> (Fall 2026).</p>
+    </div>
+
     <div class="list-item">
       <span class="date">MAY 2026</span>
       <p>New research direction launched on photonic reservoir computing for spoken digit recognition.</p>
     </div>
+
+    <div class="list-item">
+      <span class="date">APRIL 23, 2026</span>
+      <p>Dr. Hossain served as moderator for the panel discussion <a href="https://www.microelectronicsus.com/photonics-us-agenda/transforming-modern-data-centers-photonic-technologies-panel" target="_blank">"Transforming Modern Data Centers with Photonic Technologies"</a> at Microelectronics US 2026 (<a href="https://www.linkedin.com/posts/mdjobayer_photonics-datacenters-ai-share-7455788058005655552-CHym/" target="_blank">photos</a>).</p>
+    </div>
+
+    <div class="list-item">
+      <span class="date">APRIL 15, 2026</span>
+      <p>Dr. Hossain featured in Microelectronics US <a href="https://www.microelectronicsus.com/blog1/jobayer-hossain-und-ai-impacting-inverse-design-photonic-devices" target="_blank">article</a>.</p>
+    </div>
+
   </div>
 </section>
 
 <script src="js/script.js"></script>
-<script>
-document.querySelector('[data-page="news"]').classList.add('active');
-</script>
 </body>
 </html>
