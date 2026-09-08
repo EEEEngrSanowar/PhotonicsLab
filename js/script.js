@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <a href="publications.html" data-page="publications">Publications</a>
           <a href="facilities.html" data-page="facilities">Facilities</a>
           <a href="funding.html" data-page="funding">Funding</a>
+          <a href="news.html" data-page="news">News</a>
           <a href="outreach.html" data-page="outreach">Outreach</a>
           <button class="theme-toggle">🌙 Dark</button>
         </nav>
