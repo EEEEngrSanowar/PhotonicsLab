@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Facilities | UND GLIDE Lab</title>
+<meta name="description" content="Software, equipment, and fabrication resources at UND GLIDE Lab.">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .software-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  .software-list .tag {
+    font-size: 0.95rem;
+    padding: 8px 16px;
+  }
+  .facility-block {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+  .facility-block p {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    opacity: 0.9;
+  }
+  .facility-block a {
+    color: var(--primary, #009A44);
+    font-weight: 600;
+  }
+  .facility-block a:hover { text-decoration: underline; }
+</style>
+</head>
+<body data-page="facilities">
+
+<section class="hero" style="padding:70px 24px;">
+  <div class="container">
+    <h1>Research Facilities</h1>
+    <p>Software tools, lab equipment, and fabrication resources.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="facility-block">
+      <h2 class="section-title">Software</h2>
+      <p>Simulation, layout, and system-level design tools we use for photonic integrated circuits.</p>
+      <div class="software-list">
+        <span class="tag">Lumerical FDTD</span>
+        <span class="tag">Lumerical MODE</span>
+        <span class="tag">Lumerical INTERCONNECT</span>
+        <span class="tag">Luceda IPKISS</span>
+        <span class="tag">KLayout</span>
+      </div>
+    </div>
+
+    <div class="facility-block">
+      <h2 class="section-title">Lab Equipment</h2>
+      <p>Photonic test &amp; characterization setup at UND. More photos coming soon.</p>
+      <div class="gallery-grid" style="margin-top:24px;">
+        <div class="gallery-item">Photo 1</div>
+        <div class="gallery-item">Photo 2</div>
+        <div class="gallery-item">Photo 3</div>
+      </div>
+    </div>
+
+    <div class="facility-block">
+      <h2 class="section-title">Fabrication</h2>
+      <p>Device fabrication runs through multi-project wafer (MPW) foundry services and the <a href="https://und.edu/research/institutes/nanofoundry.html" target="_blank">UND Nanofoundry</a>.</p>
+    </div>
+
+  </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
