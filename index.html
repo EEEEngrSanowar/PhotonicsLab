@@ -33,6 +33,22 @@
   }
   .about-text:last-child{ margin-bottom: 0; }
 
+  .learn-more{
+    display: inline-block;
+    margin-top: 14px;
+    color: var(--primary, #009A44);
+    font-weight: 600;
+    font-size: 0.98rem;
+    text-decoration: none;
+    transition: gap 0.2s;
+  }
+  .learn-more:hover{ text-decoration: underline; }
+  .learn-more::after{
+    content: " →";
+    transition: margin-left 0.2s;
+  }
+  .learn-more:hover::after{ margin-left: 4px; }
+
   /* Slider */
   .slider{
     position:relative;
@@ -105,6 +121,12 @@
     color: #fff;
   }
 
+  .list-item p a{
+    color: var(--primary, #009A44);
+    font-weight: 500;
+  }
+  .list-item p a:hover{ text-decoration: underline; }
+
   @media (max-width: 1024px){
     .home-grid{ grid-template-columns: 1fr 1.8fr; }
     .home-news{ grid-column: 1 / -1; }
@@ -115,26 +137,7 @@
   }
 </style>
 </head>
-<body>
-<header class="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <span class="brand-mark"></span>UND GLIDE Lab
-    </a>
-    <nav class="nav-links">
-      <a href="index.html" data-page="index">Home</a>
-      <a href="research.html" data-page="research">Research</a>
-      <a href="people.html" data-page="people">People</a>
-      <a href="publications.html" data-page="publications">Publications</a>
-      <a href="projects.html" data-page="projects">Projects</a>
-      <a href="news.html" data-page="news">News</a>
-      <a href="join.html" data-page="join">Join Us</a>
-      <a href="contact.html" data-page="contact">Contact</a>
-      <button class="theme-toggle">🌙 Dark</button>
-    </nav>
-    <button class="nav-toggle">☰</button>
-  </div>
-</header>
+<body data-page="index">
 
 <section class="hero">
   <div class="container">
@@ -156,6 +159,7 @@
         <p class="about-text">
           Dr. Hossain previously worked as a silicon photonics device and circuit designer at AIM Photonics and Phase Sensitive Innovations before joining UND in January 2026. Since then, the lab has grown to several graduate researchers and is building a PIC test and characterization facility on campus, supported by a $220,000 ND EPSCoR award. Fabrication runs through multi project wafer (MPW) foundry services.
         </p>
+        <a href="research.html" class="learn-more">Learn more about our Research</a>
       </div>
     </aside>
 
@@ -196,6 +200,10 @@
       <div class="home-block">
         <h2 class="block-title">Latest News</h2>
 
+        <div class="list-item">
+          <span class="date">AUGUST 6, 2026</span>
+          <p>Dr. Hossain gave an invited talk at IEEE RAPID titled <a href="https://rapid2026.exordo.com/programme/presentation/200" target="_blank">"Towards Foundry-Compatible Photonic Neuromorphic Computing"</a> (<a href="https://www.researchgate.net/publication/411172885_Towards_Foundry-Compatible_Photonic_Neuromorphic_Computing_Architecture_Advances_and_Implementation_Challenges" target="_blank">paper</a>) and chaired the <a href="https://rapid2026.exordo.com/programme/session/104" target="_blank">Hybrid Photonic/AI Accelerator Architecture</a> session.</p>
+        </div>
         <div class="list-item">
           <span class="date">AUGUST 2026</span>
           <p>Two papers accepted at IEEE Photonics Conference (IPC) 2026.</p>
@@ -243,8 +251,6 @@
 
 <script src="js/script.js"></script>
 <script>
-document.querySelector('[data-page="index"]').classList.add('active');
-
 // Home slider
 (function(){
   const slides = document.querySelectorAll('#homeSlider .slide');
