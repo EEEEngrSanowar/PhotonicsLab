@@ -1,1 +1,1 @@
-   Images folder for GLIDE Lab website.
+Images folder for GLIDE Lab website.
