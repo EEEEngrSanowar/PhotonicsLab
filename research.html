@@ -25,11 +25,16 @@
     opacity: 0.9;
     margin-bottom: 20px;
   }
-  .area-images {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-    margin-bottom: 24px;
+  .area-images img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 1px solid var(--border, #e2e8f0);
+    background: #fff;
+    padding: 10px;
+    cursor: zoom-in;
+    transition: transform 0.2s;
   }
   .area-images img {
     width: 100%;
