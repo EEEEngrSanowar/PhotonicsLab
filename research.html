@@ -25,30 +25,29 @@
     opacity: 0.9;
     margin-bottom: 20px;
   }
-  .area-images img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px;
-    border: 1px solid var(--border, #e2e8f0);
-    background: #fff;
-    padding: 10px;
-    cursor: zoom-in;
-    transition: transform 0.2s;
+
+  /* 4-column image grid */
+  .area-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 24px;
   }
   .area-images img {
     width: 100%;
     aspect-ratio: 4/3;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px;
     border: 1px solid var(--border, #e2e8f0);
-    background: #f0f0f0;
+    background: #fff;
+    padding: 8px;
     cursor: zoom-in;
     transition: transform 0.2s;
   }
   .area-images img:hover {
     transform: scale(1.03);
   }
+
   .area-pubs {
     margin-top: 16px;
   }
@@ -131,8 +130,8 @@
     <div class="research-area" id="neuromorphic">
       <h2 class="area-title">Photonic Neuromorphic Computing</h2>
       <p class="area-desc">
-  Photonic neuromorphic computing enables ultra-fast, energy-efficient AI hardware for defense signal processing — terahertz bandwidths, sub-nanosecond latency, and EM immunity beyond electronic reach. Our work spans the architecture, device building blocks, and foundry-compatible implementation of these systems, with a focus on manufacturable circuits on standard silicon photonics platforms.
-</p>
+        Photonic neuromorphic computing enables ultra-fast, energy-efficient AI hardware for defense signal processing — terahertz bandwidths, sub-nanosecond latency, and EM immunity beyond electronic reach. Our work spans the architecture, device building blocks, and foundry-compatible implementation of these systems, with a focus on manufacturable circuits on standard silicon photonics platforms.
+      </p>
       <div class="area-images">
         <img src="Images/Research Page/neuromorphic1.jpg" alt="Neuromorphic computing figure 1">
         <!-- <img src="images/neuromorphic2.jpg" alt="Neuromorphic computing figure 2">
