@@ -27,8 +27,8 @@
   }
   .area-images {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
     margin-bottom: 24px;
   }
   .area-images img {
@@ -38,6 +38,11 @@
     border-radius: 10px;
     border: 1px solid var(--border, #e2e8f0);
     background: #f0f0f0;
+    cursor: zoom-in;
+    transition: transform 0.2s;
+  }
+  .area-images img:hover {
+    transform: scale(1.03);
   }
   .area-pubs {
     margin-top: 16px;
@@ -86,6 +91,14 @@
     background: var(--primary, #009A44);
     color: #fff;
   }
+
+  /* Responsive image grid */
+  @media (max-width: 900px) {
+    .area-images { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 500px) {
+    .area-images { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body data-page="research">
@@ -114,8 +127,10 @@
       <h2 class="area-title">Photonic Neuromorphic Computing</h2>
       <p class="area-desc">Brief description of this research direction — what we do, why it matters. Replace this text.</p>
       <div class="area-images">
-        <img src="images/neuromorphic1.jpg" alt="Neuromorphic computing figure">
-        <img src="images/neuromorphic2.jpg" alt="Neuromorphic computing figure">
+        <img src="images/neuromorphic1.jpg" alt="Neuromorphic computing figure 1">
+        <img src="images/neuromorphic2.jpg" alt="Neuromorphic computing figure 2">
+        <img src="images/neuromorphic3.jpg" alt="Neuromorphic computing figure 3">
+        <img src="images/neuromorphic4.jpg" alt="Neuromorphic computing figure 4">
       </div>
       <div class="area-pubs">
         <h4>Related Publications</h4>
@@ -130,8 +145,10 @@
       <h2 class="area-title">Photonic Reservoir Computing</h2>
       <p class="area-desc">Brief description of this research direction. Replace this text.</p>
       <div class="area-images">
-        <img src="images/reservoir1.jpg" alt="Reservoir computing figure">
-        <img src="images/reservoir2.jpg" alt="Reservoir computing figure">
+        <img src="images/reservoir1.jpg" alt="Reservoir computing figure 1">
+        <img src="images/reservoir2.jpg" alt="Reservoir computing figure 2">
+        <img src="images/reservoir3.jpg" alt="Reservoir computing figure 3">
+        <img src="images/reservoir4.jpg" alt="Reservoir computing figure 4">
       </div>
       <div class="area-pubs">
         <h4>Related Publications</h4>
@@ -146,8 +163,10 @@
       <h2 class="area-title">Photonic Quantum Computing</h2>
       <p class="area-desc">Brief description of this research direction. Replace this text.</p>
       <div class="area-images">
-        <img src="images/quantum1.jpg" alt="Quantum computing figure">
-        <img src="images/quantum2.jpg" alt="Quantum computing figure">
+        <img src="images/quantum1.jpg" alt="Quantum computing figure 1">
+        <img src="images/quantum2.jpg" alt="Quantum computing figure 2">
+        <img src="images/quantum3.jpg" alt="Quantum computing figure 3">
+        <img src="images/quantum4.jpg" alt="Quantum computing figure 4">
       </div>
       <div class="area-pubs">
         <h4>Related Publications</h4>
@@ -162,8 +181,10 @@
       <h2 class="area-title">LiDAR</h2>
       <p class="area-desc">Brief description of this research direction. Replace this text.</p>
       <div class="area-images">
-        <img src="images/lidar1.jpg" alt="LiDAR figure">
-        <img src="images/lidar2.jpg" alt="LiDAR figure">
+        <img src="images/lidar1.jpg" alt="LiDAR figure 1">
+        <img src="images/lidar2.jpg" alt="LiDAR figure 2">
+        <img src="images/lidar3.jpg" alt="LiDAR figure 3">
+        <img src="images/lidar4.jpg" alt="LiDAR figure 4">
       </div>
       <div class="area-pubs">
         <h4>Related Publications</h4>
@@ -178,8 +199,10 @@
       <h2 class="area-title">Signal Manipulation</h2>
       <p class="area-desc">Brief description of this research direction. Replace this text.</p>
       <div class="area-images">
-        <img src="images/signal1.jpg" alt="Signal manipulation figure">
-        <img src="images/signal2.jpg" alt="Signal manipulation figure">
+        <img src="images/signal1.jpg" alt="Signal manipulation figure 1">
+        <img src="images/signal2.jpg" alt="Signal manipulation figure 2">
+        <img src="images/signal3.jpg" alt="Signal manipulation figure 3">
+        <img src="images/signal4.jpg" alt="Signal manipulation figure 4">
       </div>
       <div class="area-pubs">
         <h4>Related Publications</h4>
