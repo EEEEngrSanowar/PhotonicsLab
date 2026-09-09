@@ -6,69 +6,193 @@
 <title>Research | UND GLIDE Lab</title>
 <meta name="description" content="Research areas of UND GLIDE Lab.">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  .research-area {
+    max-width: 1000px;
+    margin: 0 auto 70px;
+    scroll-margin-top: 100px;
+  }
+  .research-area .area-title {
+    font-size: 1.8rem;
+    color: var(--primary, #009A44);
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary, #009A44);
+  }
+  .research-area .area-desc {
+    font-size: 1rem;
+    line-height: 1.7;
+    opacity: 0.9;
+    margin-bottom: 20px;
+  }
+  .area-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .area-images img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--border, #e2e8f0);
+    background: #f0f0f0;
+  }
+  .area-pubs {
+    margin-top: 16px;
+  }
+  .area-pubs h4 {
+    font-size: 1.05rem;
+    color: var(--primary, #009A44);
+    margin-bottom: 10px;
+  }
+  .area-pubs ul {
+    list-style: disc;
+    padding-left: 22px;
+    margin: 0;
+  }
+  .area-pubs li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    opacity: 0.9;
+  }
+  .area-pubs li em {
+    font-style: italic;
+  }
+
+  /* Quick-jump nav at top */
+  .area-jump {
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .area-jump a {
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--primary, #009A44);
+    color: var(--primary, #009A44);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .area-jump a:hover {
+    background: var(--primary, #009A44);
+    color: #fff;
+  }
+</style>
 </head>
-<body>
-<header class="navbar">
-  <div class="nav-inner">
-    <a href="index.html" class="brand">
-      <span class="brand-mark"></span> UND GLIDE Lab
-    </a>
-    <nav class="nav-links">
-      <a href="index.html" data-page="index">Home</a>
-      <a href="research.html" data-page="research">Research</a>
-      <a href="people.html" data-page="people">People</a>
-      <a href="publications.html" data-page="publications">Publications</a>
-      <a href="projects.html" data-page="projects">Projects</a>
-      <a href="news.html" data-page="news">News</a>
-      <a href="join.html" data-page="join">Join Us</a>
-      <a href="contact.html" data-page="contact">Contact</a>
-      <button class="theme-toggle">🌙 Dark</button>
-    </nav>
-    <button class="nav-toggle">☰</button>
-  </div>
-</header>
+<body data-page="research">
+
 <section class="hero" style="padding:70px 24px;">
-  <div class="container"><h1>Research</h1><p>Interdisciplinary work spanning photonics, neuromorphic systems, quantum computing, and machine learning.</p></div>
+  <div class="container">
+    <h1>Research</h1>
+    <p>Interdisciplinary work in photonic computing, quantum systems, sensing, and signal processing.</p>
+  </div>
 </section>
+
 <section class="section">
   <div class="container">
-    <div class="grid">
-      <div class="card">
-        <h3>Silicon Photonics</h3>
-        <p>Integrated photonic devices fabricated using CMOS-compatible processes.</p>
-        <span class="tag">Waveguides</span><span class="tag">Ring Resonators</span><span class="tag">Grating Couplers</span><span class="tag">MZI Devices</span>
+
+    <!-- Quick jump nav -->
+    <nav class="area-jump">
+      <a href="#neuromorphic">Photonic Neuromorphic Computing</a>
+      <a href="#reservoir">Photonic Reservoir Computing</a>
+      <a href="#quantum">Photonic Quantum Computing</a>
+      <a href="#lidar">LiDAR</a>
+      <a href="#signal">Signal Manipulation</a>
+    </nav>
+
+    <!-- 1. Photonic Neuromorphic Computing -->
+    <div class="research-area" id="neuromorphic">
+      <h2 class="area-title">Photonic Neuromorphic Computing</h2>
+      <p class="area-desc">Brief description of this research direction — what we do, why it matters. Replace this text.</p>
+      <div class="area-images">
+        <img src="images/neuromorphic1.jpg" alt="Neuromorphic computing figure">
+        <img src="images/neuromorphic2.jpg" alt="Neuromorphic computing figure">
       </div>
-      <div class="card">
-        <h3>Neuromorphic Photonics</h3>
-        <p>Photonic systems inspired by biological neural networks.</p>
-        <span class="tag">Optical Neural Networks</span><span class="tag">Spiking Photonics</span><span class="tag">Analog Optical Computing</span>
-      </div>
-      <div class="card">
-        <h3>Quantum Computing</h3>
-        <p>Photonic platforms for quantum information processing and quantum-classical hybrid computing.</p>
-        <span class="tag">Photonic Qubits</span><span class="tag">Quantum Gates</span><span class="tag">Hybrid Computing</span>
-      </div>
-      <div class="card">
-        <h3>Optical Reservoir Computing</h3>
-        <p>Physical computing using nonlinear, delay-based optical systems.</p>
-        <span class="tag">Speech Recognition</span><span class="tag">Time-Series Prediction</span><span class="tag">RF Signal Processing</span>
-      </div>
-      <div class="card">
-        <h3>Integrated AI Hardware</h3>
-        <p>Energy-efficient hardware accelerators built on photonic integrated circuits.</p>
-      </div>
-      <div class="card">
-        <h3>Machine Learning for Photonics</h3>
-        <p>AI-assisted photonic device optimization.</p>
-        <span class="tag">Inverse Design</span><span class="tag">Bayesian Optimization</span><span class="tag">Neural Networks</span>
+      <div class="area-pubs">
+        <h4>Related Publications</h4>
+        <ul>
+          <li>MJ Hossain, <em>"Towards Foundry-Compatible Photonic Neuromorphic Computing: Architecture, Advances, and Implementation Challenges"</em>, IEEE RAPID Conference, 2026.</li>
+        </ul>
       </div>
     </div>
+
+    <!-- 2. Photonic Reservoir Computing -->
+    <div class="research-area" id="reservoir">
+      <h2 class="area-title">Photonic Reservoir Computing</h2>
+      <p class="area-desc">Brief description of this research direction. Replace this text.</p>
+      <div class="area-images">
+        <img src="images/reservoir1.jpg" alt="Reservoir computing figure">
+        <img src="images/reservoir2.jpg" alt="Reservoir computing figure">
+      </div>
+      <div class="area-pubs">
+        <h4>Related Publications</h4>
+        <ul>
+          <li>MS Hossain, A Al Arafat, AS Rakin, MJ Hossain, <em>"Integrated Photonic Time-Multiplexed Reservoir Computing for Time Series Prediction"</em>, International Conference on Artificial Intelligence Applications and Innovations, 2026.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. Photonic Quantum Computing -->
+    <div class="research-area" id="quantum">
+      <h2 class="area-title">Photonic Quantum Computing</h2>
+      <p class="area-desc">Brief description of this research direction. Replace this text.</p>
+      <div class="area-images">
+        <img src="images/quantum1.jpg" alt="Quantum computing figure">
+        <img src="images/quantum2.jpg" alt="Quantum computing figure">
+      </div>
+      <div class="area-pubs">
+        <h4>Related Publications</h4>
+        <ul>
+          <li>Publications to be added.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. LiDAR -->
+    <div class="research-area" id="lidar">
+      <h2 class="area-title">LiDAR</h2>
+      <p class="area-desc">Brief description of this research direction. Replace this text.</p>
+      <div class="area-images">
+        <img src="images/lidar1.jpg" alt="LiDAR figure">
+        <img src="images/lidar2.jpg" alt="LiDAR figure">
+      </div>
+      <div class="area-pubs">
+        <h4>Related Publications</h4>
+        <ul>
+          <li>MS Hossain, MJ Hossain, <em>"Silicon Photonic Optical Phased Array with Apodized Grating Antennas for On-Chip LiDAR"</em>, IEEE Photonics Conference (IPC) 2026.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. Signal Manipulation -->
+    <div class="research-area" id="signal">
+      <h2 class="area-title">Signal Manipulation</h2>
+      <p class="area-desc">Brief description of this research direction. Replace this text.</p>
+      <div class="area-images">
+        <img src="images/signal1.jpg" alt="Signal manipulation figure">
+        <img src="images/signal2.jpg" alt="Signal manipulation figure">
+      </div>
+      <div class="area-pubs">
+        <h4>Related Publications</h4>
+        <ul>
+          <li>MS Hossain, MJ Hossain, <em>"4-bit Photonic Analog-to-Digital Converter on a 300 mm Silicon Photonics Platform"</em>, IEEE Photonics Conference (IPC) 2026.</li>
+          <li>MJ Hossain, JA Mann, A Dikshit, J Wallner, GJ Leake, CV Baiocco, <em>"Low-Loss, Low-Crosstalk Arrayed Waveguide Grating on a 300 mm Silicon Photonics Platform"</em>, IEEE Photonics Technology Letters, 2026.</li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <script src="js/script.js"></script>
-<script>
-document.querySelector('[data-page="research"]').classList.add('active');
-</script>
 </body>
 </html>
