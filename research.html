@@ -26,26 +26,82 @@
     margin-bottom: 20px;
   }
 
-  /* 4-column image grid */
-  .area-images {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-    margin-bottom: 24px;
-  }
-  .area-images img {
+  /* Research-area image slider */
+  .area-slider {
+    position: relative;
     width: 100%;
+    max-width: 700px;
     aspect-ratio: 4/3;
-    object-fit: contain;
-    border-radius: 10px;
-    border: 1px solid var(--border, #e2e8f0);
+    margin: 0 auto 24px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
     background: #fff;
-    padding: 8px;
-    cursor: zoom-in;
-    transition: transform 0.2s;
+    border: 1px solid var(--border, #e2e8f0);
   }
-  .area-images img:hover {
-    transform: scale(1.03);
+  .area-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .area-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  .area-slide.active { opacity: 1; }
+  .area-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .area-slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 2;
+  }
+  .area-slider-btn:hover { background: rgba(0,0,0,0.7); }
+  .area-slider-btn.prev { left: 12px; }
+  .area-slider-btn.next { right: 12px; }
+  .area-slider-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 7px;
+    z-index: 2;
+  }
+  .area-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .area-dot.active {
+    background: var(--primary, #009A44);
+    transform: scale(1.3);
   }
 
   .area-pubs {
@@ -96,12 +152,8 @@
     color: #fff;
   }
 
-  /* Responsive image grid */
-  @media (max-width: 900px) {
-    .area-images { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 500px) {
-    .area-images { grid-template-columns: 1fr; }
+  @media (max-width: 600px) {
+    .area-slider { max-width: 100%; }
   }
 </style>
 </head>
@@ -125,17 +177,27 @@
       <a href="#signal">Signal Processing / Manipulation using PIC</a>
     </nav>
 
-    <!-- 1. On-Chip Photonic AI Accelerator (Neuromorphic + Reservoir merged) -->
+    <!-- 1. On-Chip Photonic AI Accelerator -->
     <div class="research-area" id="ai-accelerator">
       <h2 class="area-title">On-Chip Photonic AI Accelerator</h2>
       <p class="area-desc">
         We design on-chip photonic AI accelerators — neuromorphic and reservoir computing architectures on standard silicon photonics platforms — for ultra-fast, energy-efficient inference. Operating at 1550 nm with terahertz bandwidths, sub-nanosecond latency, and EM immunity, these circuits enable non-von Neumann processing of time-series, speech, and defense signals on a single manufacturable chip, spanning the architecture, device building blocks, and foundry-compatible implementation.
       </p>
-      <div class="area-images">
-        <img src="Images/Research Page/neuromorphic1.jpg" alt="Photonic AI accelerator figure 1">
-        <img src="Images/Research Page/reservoir1.jpg" alt="Photonic AI accelerator figure 2">
-        <img src="Images/Research Page/reservoir2.jpg" alt="Photonic AI accelerator figure 3">
-        <img src="Images/Research Page/reservoir3.jpg" alt="Photonic AI accelerator figure 4">
+      <div class="area-slider" data-slider="ai">
+        <div class="area-slides">
+          <div class="area-slide active"><img src="Images/Research Page/neuromorphic1.jpg" alt=""></div>
+          <div class="area-slide"><img src="Images/Research Page/reservoir1.jpg" alt=""></div>
+          <div class="area-slide"><img src="Images/Research Page/reservoir2.jpg" alt=""></div>
+          <div class="area-slide"><img src="Images/Research Page/reservoir3.jpg" alt=""></div>
+        </div>
+        <button class="area-slider-btn prev" aria-label="Previous">‹</button>
+        <button class="area-slider-btn next" aria-label="Next">›</button>
+        <div class="area-slider-dots">
+          <span class="area-dot active" data-index="0"></span>
+          <span class="area-dot" data-index="1"></span>
+          <span class="area-dot" data-index="2"></span>
+          <span class="area-dot" data-index="3"></span>
+        </div>
       </div>
       <div class="area-pubs">
         <h4>Related Publications</h4>
@@ -149,13 +211,24 @@
     <!-- 2. Photonic Quantum Computing -->
     <div class="research-area" id="quantum">
       <h2 class="area-title">Photonic Quantum Computing</h2>
-      <!-- <p class="area-desc"></p>
-      <div class="area-images">
-        <img src="Images/Research Page/quantum1.jpg" alt="Quantum computing figure 1">
-        <img src="Images/Research Page/quantum2.jpg" alt="Quantum computing figure 2">
-        <img src="Images/Research Page/quantum3.jpg" alt="Quantum computing figure 3">
-        <img src="Images/Research Page/quantum4.jpg" alt="Quantum computing figure 4">
-      </div> -->
+      <!-- Slider hidden until images are ready
+      <div class="area-slider" data-slider="quantum">
+        <div class="area-slides">
+          <div class="area-slide active"><img src="Images/Research Page/quantum1.jpg" alt=""></div>
+          <div class="area-slide"><img src="Images/Research Page/quantum2.jpg" alt=""></div>
+          <div class="area-slide"><img src="Images/Research Page/quantum3.jpg" alt=""></div>
+          <div class="area-slide"><img src="Images/Research Page/quantum4.jpg" alt=""></div>
+        </div>
+        <button class="area-slider-btn prev" aria-label="Previous">‹</button>
+        <button class="area-slider-btn next" aria-label="Next">›</button>
+        <div class="area-slider-dots">
+          <span class="area-dot active" data-index="0"></span>
+          <span class="area-dot" data-index="1"></span>
+          <span class="area-dot" data-index="2"></span>
+          <span class="area-dot" data-index="3"></span>
+        </div>
+      </div>
+      -->
       <div class="area-pubs">
         <h4>Related Publications</h4>
         <ul>
@@ -167,12 +240,21 @@
     <!-- 3. On-Chip LiDAR -->
     <div class="research-area" id="lidar">
       <h2 class="area-title">On-Chip LiDAR</h2>
-      <p class="area-desc"></p>
-      <div class="area-images">
-        <img src="Images/Research Page/lidar1.jpg" alt="LiDAR figure 1">
-        <img src="Images/Research Page/lidar2.jpg" alt="LiDAR figure 2">
-        <img src="Images/Research Page/lidar3.jpg" alt="LiDAR figure 3">
-        <img src="Images/Research Page/lidar4.jpg" alt="LiDAR figure 4">
+      <div class="area-slider" data-slider="lidar">
+        <div class="area-slides">
+          <div class="area-slide active"><img src="Images/Research Page/lidar1.jpg" alt=""></div>
+          <div class="area-slide"><img src="Images/Research Page/lidar2.jpg" alt=""></div>
+          <div class="area-slide"><img src="Images/Research Page/lidar3.jpg" alt=""></div>
+          <div class="area-slide"><img src="Images/Research Page/lidar4.jpg" alt=""></div>
+        </div>
+        <button class="area-slider-btn prev" aria-label="Previous">‹</button>
+        <button class="area-slider-btn next" aria-label="Next">›</button>
+        <div class="area-slider-dots">
+          <span class="area-dot active" data-index="0"></span>
+          <span class="area-dot" data-index="1"></span>
+          <span class="area-dot" data-index="2"></span>
+          <span class="area-dot" data-index="3"></span>
+        </div>
       </div>
       <div class="area-pubs">
         <h4>Related Publications</h4>
@@ -183,27 +265,68 @@
     </div>
 
     <!-- 4. Signal Processing / Manipulation using PIC -->
-<div class="research-area" id="signal">
-  <h2 class="area-title">Signal Processing / Manipulation using PIC</h2>
-  <p class="area-desc"></p>
-  <div class="area-images">
-    <img src="Images/Research Page/signal1.jpg" alt="Signal processing figure 1">
-    <img src="Images/Research Page/signal2.jpg" alt="Signal processing figure 2">
-    <img src="Images/Research Page/signal3.jpg" alt="Signal processing figure 3">
-    <img src="Images/Research Page/signal4.jpg" alt="Signal processing figure 4">
-  </div>
-  <div class="area-pubs">
-    <h4>Related Publications</h4>
-    <ul>
-      <li>MS Hossain, MJ Hossain, <em>"4-bit Photonic Analog-to-Digital Converter on a 300 mm Silicon Photonics Platform"</em>, IEEE Photonics Conference (IPC) 2026.</li>
-      <li>MJ Hossain, JA Mann, A Dikshit, J Wallner, GJ Leake, CV Baiocco, <em>"Low-Loss, Low-Crosstalk Arrayed Waveguide Grating on a 300 mm Silicon Photonics Platform"</em>, IEEE Photonics Technology Letters, vol. 38, no. 10, 15 May 2026.</li>
-    </ul>
-  </div>
-</div>
+    <div class="research-area" id="signal">
+      <h2 class="area-title">Signal Processing / Manipulation using PIC</h2>
+      <div class="area-slider" data-slider="signal">
+        <div class="area-slides">
+          <div class="area-slide active"><img src="Images/Research Page/signal1.jpg" alt=""></div>
+          <div class="area-slide"><img src="Images/Research Page/signal2.jpg" alt=""></div>
+          <div class="area-slide"><img src="Images/Research Page/signal3.jpg" alt=""></div>
+          <div class="area-slide"><img src="Images/Research Page/signal4.jpg" alt=""></div>
+        </div>
+        <button class="area-slider-btn prev" aria-label="Previous">‹</button>
+        <button class="area-slider-btn next" aria-label="Next">›</button>
+        <div class="area-slider-dots">
+          <span class="area-dot active" data-index="0"></span>
+          <span class="area-dot" data-index="1"></span>
+          <span class="area-dot" data-index="2"></span>
+          <span class="area-dot" data-index="3"></span>
+        </div>
+      </div>
+      <div class="area-pubs">
+        <h4>Related Publications</h4>
+        <ul>
+          <li>MS Hossain, MJ Hossain, <em>"4-bit Photonic Analog-to-Digital Converter on a 300 mm Silicon Photonics Platform"</em>, IEEE Photonics Conference (IPC) 2026.</li>
+          <li>MJ Hossain, JA Mann, A Dikshit, J Wallner, GJ Leake, CV Baiocco, <em>"Low-Loss, Low-Crosstalk Arrayed Waveguide Grating on a 300 mm Silicon Photonics Platform"</em>, IEEE Photonics Technology Letters, vol. 38, no. 10, 15 May 2026.</li>
+        </ul>
+      </div>
+    </div>
 
   </div>
 </section>
 
 <script src="js/script.js"></script>
+<script>
+// Initialize every .area-slider on the page independently
+(function(){
+  document.querySelectorAll('.area-slider').forEach(function(slider){
+    const slides = slider.querySelectorAll('.area-slide');
+    const dots   = slider.querySelectorAll('.area-dot');
+    const prev   = slider.querySelector('.area-slider-btn.prev');
+    const next   = slider.querySelector('.area-slider-btn.next');
+    if (!slides.length) return;
+
+    let current = 0;
+    let timer;
+
+    function show(i){
+      current = (i + slides.length) % slides.length;
+      slides.forEach(s => s.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      slides[current].classList.add('active');
+      if (dots[current]) dots[current].classList.add('active');
+    }
+    function goNext(){ show(current + 1); }
+    function goPrev(){ show(current - 1); }
+    function restart(){ clearInterval(timer); timer = setInterval(goNext, 5000); }
+
+    if (next) next.addEventListener('click', () => { goNext(); restart(); });
+    if (prev) prev.addEventListener('click', () => { goPrev(); restart(); });
+    dots.forEach((d, i) => d.addEventListener('click', () => { show(i); restart(); }));
+
+    restart();
+  });
+})();
+</script>
 </body>
 </html>
